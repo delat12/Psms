@@ -3,7 +3,7 @@ Application for personal records managment with CRUD Implementation and MVC patt
 
 Dynamic Web Project converted to Maven Project
 
-Servlet Insert, Registration, Edit, Delete Stuff and return data from database example with Maven
+Servlet Insert, Save, Edit, Delete Stuff and return data from database example with Maven
 
 # Author :
 Attilio Dell'Anno
