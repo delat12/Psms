@@ -69,7 +69,7 @@ public class StuffController extends HttpServlet {
 		}
 	}
 
-	private void updateStuff(HttpServletRequest req, HttpServletResponse resp)
+	public void updateStuff(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 		int id = Integer.parseInt(req.getParameter("id"));
 		String name = req.getParameter("name");
@@ -82,7 +82,7 @@ public class StuffController extends HttpServlet {
 		resp.sendRedirect("StuffList.jsp");
 	}
 
-	private void showEditForm(HttpServletRequest req, HttpServletResponse resp)
+	public void showEditForm(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 		String id = req.getParameter("id");
 		Optional<Stuff> existingStuff = stuffDao.find(id);
@@ -91,7 +91,7 @@ public class StuffController extends HttpServlet {
 		dispatcher.forward(req, resp);
 	}
 
-	private void deleteStuff(HttpServletRequest req, HttpServletResponse resp)
+	public void deleteStuff(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 		int id = Integer.parseInt(req.getParameter("id"));
 
@@ -112,14 +112,14 @@ public class StuffController extends HttpServlet {
 		resp.sendRedirect("StuffForm.jsp");
 	}
 
-	private void showNewForm(HttpServletRequest req, HttpServletResponse resp)
+	public void showNewForm(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("StuffForm.jsp");
 		dispatcher.forward(req, resp);
 	}
 
-	private void listStuff(HttpServletRequest req, HttpServletResponse resp)
+	public void listStuff(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/StuffList.jsp");
 

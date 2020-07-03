@@ -16,22 +16,6 @@ import org.junit.Test;
 
 public class TestStuffController {
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
 	public void testDoGetHttpServletRequestHttpServletResponse() throws SQLException, IOException, ServletException {
 		StuffController servlet = new StuffController();
@@ -46,10 +30,16 @@ public class TestStuffController {
 	    when(request.getParameter("location")).thenReturn("testLocation");
 	    servlet.insertStuff(request, response);
 	}
-
 	@Test
-	public void testDoGetHttpServletRequestHttpServletResponse1() {
-		fail("Not yet implemented");
-	}
+	public void testDoGetHttpServletRequestHttpServletResponse2() throws SQLException, IOException, ServletException {
+		StuffController servlet = new StuffController();
+		HttpServletRequest request = mock(HttpServletRequest.class);
+		HttpServletResponse response = mock(HttpServletResponse.class);
+		DbConnect.getInstance().getConnection();
 
+		when(request.getParameter("id")).thenReturn("23");
+		servlet.deleteStuff(request, response);
+
+	}
+	
 }
