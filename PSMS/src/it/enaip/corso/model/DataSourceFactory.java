@@ -1,4 +1,4 @@
-package com.mitrais.psms.model;
+package it.enaip.corso.model;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

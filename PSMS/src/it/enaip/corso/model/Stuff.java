@@ -1,4 +1,4 @@
-package com.mitrais.psms.model;
+package it.enaip.corso.model;
 
 public class Stuff {
 	protected int id;

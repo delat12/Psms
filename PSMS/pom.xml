@@ -25,6 +25,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
 	</build>
 	<dependencies>
 		<dependency>

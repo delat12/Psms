@@ -1,4 +1,4 @@
-package com.mitrais.psms.model;
+package it.enaip.corso.model;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mitrais.psms.model;
+package it.enaip.corso.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
