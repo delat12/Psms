@@ -100,7 +100,7 @@ public class StuffController extends HttpServlet {
 		resp.sendRedirect("StuffList.jsp");
 	}
 
-	private void insertStuff(HttpServletRequest req, HttpServletResponse resp)
+	public void insertStuff(HttpServletRequest req, HttpServletResponse resp)
 			throws SQLException, IOException, ServletException {
 		String name = req.getParameter("name");
 		String description = req.getParameter("description");
