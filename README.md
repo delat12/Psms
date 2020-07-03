@@ -26,5 +26,14 @@ Oracle Sequel Developer
 Eclipse 2019-12,
 Maven
 
+# Details:
+Unit test with jUnit (version 4),
+
+Test Run / Debug,
+
+maven 3.5 tests by ide and command line,
+
+removed external jARS ojdbc8 from the libraries and added dependencies to the POM
+
 # Project Structure
 ![ScreenProject](https://user-images.githubusercontent.com/67362633/86365311-a136a880-bc79-11ea-9a8d-627339df8558.png)
